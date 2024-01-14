@@ -61,6 +61,12 @@
   </build>
 
   <scm>
+    <!--
+    Connection using HTTPS with credentials from environment variables.
+    This was run using `mvn release:prepare` at the command line.
+    To do the same in IntelliJ, I set the environment variables on
+    the Maven Run Configuration for `release:prepare`. (And release:perform.)
+    -->
     <developerConnection>scm:git:https://${env.GH_USER}:${env.GH_PASS}@github.com/matt-wiley/udemy-sfg-pet-clinic.git</developerConnection>
     <tag>HEAD</tag>
   </scm>

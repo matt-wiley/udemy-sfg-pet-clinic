@@ -1,5 +1,7 @@
 HELP.md
 target/
+*.xml.releaseBackup
+release.properties
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
