@@ -5,10 +5,25 @@
   <title>Spring Pet Clinic - List of Owners</title>
 </head>
 <body>
+<!--/*thymesVar id="owners" type="guru.springframework.sfgpetclinic.model.Owner"*/-->
 <!--
 The single quotes below are important when using raw strings
 in Thymeleaf. Without them, the expression will not be evaluated.
 -->
 <h1 th:text="'List of Owners'">Title</h1>
+
+<table>
+  <tr>
+    <th th:text="'Id'">Id</th>
+    <th th:text="'First Name'">Name</th>
+    <th th:text="'Last Name'">Name</th>
+  </tr>
+  <tr th:each="owner : ${owners}">
+    <td th:text="${owner?.id}">Id</td>
+    <td th:text="${owner?.firstName}">First Name</td>
+    <td th:text="${owner?.lastName}">Last Name</td>
+  </tr>
+</table>
+
 </body>
 </html>
